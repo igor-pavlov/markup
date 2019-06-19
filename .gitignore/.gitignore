@@ -1,0 +1,6 @@
+# Folders to ignore
+.git
+.idea/
+node_modules
+npm-debug.log
+.DS_Store
