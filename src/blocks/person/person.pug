@@ -1,0 +1,79 @@
+include ../icon/icon
+
+mixin person()
+    +b.person&attributes(attributes)
+        +e('nav').nav
+            +e('a').item(href="#")
+                +e.count !
+                +icon('person-mail')
+            +e('a').item(href="#")
+                +e.count 9
+                +icon('person-reviews')
+            +e('a').item(href="#")
+                +e.count 2
+                +icon('person-message')
+        +e.image(style="background-image: url('assets/images/person.png');")
+        +e('a').arrow(href="#")
+            +icon('person-arrow')
+        +e.menu
+            +e.block.mobile-hide
+                +e('div').item
+                    +link({"title": "Мой профиль", "href": "#"}).person__link
+                +e('div').item
+                    +link({"title": "Мои заявки", "href": "#"}).person__link
+                    +e.count 2
+                +e('div').item
+                    +link({"title": "Мои сообщения", "href": "#"}).person__link
+                    +e.count 9
+                +e('div').item
+                    +link({"title": "Отзывы", "href": "#"}).person__link
+                    +e.count !
+            +e.block.mobile-hide
+                +e('div').item
+                    +link({"title": "Перейти на PRO", "href": "#"}).person__link
+                    +e.signal
+                +e('div').item
+                    +link({"title": "Сменить аккаунт", "href": "#"}).person__link
+            +e.block.mobile-hide
+                +e('div').item
+                    +link({"title": "Выйти", "href": "#"}).person__link
+
+            +e.block.person__block--mobile.mobile-visible
+                +e.photo
+                    +e.image(style="background-image: url('assets/images/person.png');")
+                    +e.info
+                        +e.name Анна Михайловская
+                        +e.profession Фотограф
+
+            +e.block.person__block--mobile.mobile-visible
+                +e('div').item
+                    +e.icon
+                        +icon('person-menu-mail')
+                    +link({"title": "Мои сообщения", "href": "#"}).person__link
+                    +e.count 9
+                +e('div').item
+                    +e.icon
+                        +icon('person-menu-reviews')
+                    +link({"title": "Мои отзывы", "href": "#"}).person__link
+                +e('div').item
+                    +e.icon
+                        +icon('person-menu-applications')
+                    +link({"title": "Мои заявки", "href": "#"}).person__link
+                +e('div').item
+                    +e.icon
+                        +icon('person-menu-fav')
+                    +link({"title": "Избранное", "href": "#"}).person__link
+
+            +e.block.person__block--mobile.mobile-visible
+                +e('div').item
+                    +e.icon
+                        +e.signal
+                    +link({"title": "Перейти на PRO", "href": "#"}).person__link
+
+                +e('div').item
+                    +e.icon.person__icon--change(style="background-image: url('../assets/images/change.png')")
+
+                    +link({"title": "Сменить аккаунт", "href": "#"}).person__link
+
+            +button({"title": "Выйти", "style": "action"}).person__button
+

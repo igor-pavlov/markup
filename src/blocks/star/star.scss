@@ -1,0 +1,21 @@
+.star {
+  cursor: pointer;
+
+  svg {
+    --stroke-color: #E0E0E0;
+    --fill-color: #E0E0E0;
+  }
+
+  &--active {
+    svg {
+      --stroke-color: #F2994A;
+      --fill-color: #F2994A;
+    }
+  }
+
+  &:hover {
+    svg {
+      --stroke-color: #F2994A;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+include ../error/error
+
+mixin textarea(data)
+    - data = data || {}
+
+    +b.textarea
+        if data.label
+            +e('label').label(for=data.name)=data.label
+
+        +e.content(contenteditable="true" placeholder=data.placeholder)&attributes(attributes)=data.value
+
+        +error()

@@ -1,0 +1,26 @@
+include ../link/link
+include ../icon/icon
+
+mixin social(location, item)
+    - item = item || {}
+
+    +b.social(class=`social--${location}`)&attributes(attributes)
+        if location === 'login'
+            each link in item.social_login
+                +e('a').item(class=`social__item--${link.title}` href=link.href)
+                    +icon(link.icon)
+
+        else if location === 'request'
+            each link in item.with_share
+                +e('a').item(class=`social__item--${link.title}` href=link.href)
+                    +icon(link.icon)
+
+        else if location === 'sidebar'
+            each link in item.sidebar
+                +e('a').item(class=`social__item--${link.title}` href=link.href)
+                    +icon(link.icon)
+
+        else
+            each link in item.social
+                +e('a').item(class=`social__item--${link.title}` href=link.href)=link.title
+

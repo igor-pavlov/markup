@@ -1,0 +1,67 @@
+$fontsUrl: '../fonts/';
+
+@font-face {
+  font-family:'DeeDee';
+  src: url($fontsUrl + 'DeeDee/DeeDee.eot');
+  src: url($fontsUrl + 'DeeDee/DeeDee.eot?#iefix') format('embedded-opentype'),
+       url($fontsUrl + 'DeeDee/DeeDee.woff2') format('woff2'),
+       url($fontsUrl + 'DeeDee/DeeDee.woff') format('woff'),
+       url($fontsUrl + 'DeeDee/DeeDee.svg#DeeDee') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DeeDee';
+  src: url($fontsUrl + 'DeeDee/DeeDee-Bold.eot');
+  src: url($fontsUrl + 'DeeDee/DeeDee-Bold.eot?#iefix') format('embedded-opentype'),
+  url($fontsUrl + 'DeeDee/DeeDee-Bold.woff2') format('woff2'),
+  url($fontsUrl + 'DeeDee/DeeDee-Bold.woff') format('woff'),
+  url($fontsUrl + 'DeeDee/DeeDee-Bold.svg#DeeDee-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DeeDee';
+  src: url($fontsUrl + 'DeeDee/DeeDee-BoldItalic.eot');
+  src: url($fontsUrl + 'DeeDee/DeeDee-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  url($fontsUrl + 'DeeDee/DeeDee-BoldItalic.woff2') format('woff2'),
+  url($fontsUrl + 'DeeDee/DeeDee-BoldItalic.woff') format('woff'),
+  url($fontsUrl + 'DeeDee/DeeDee-BoldItalic.svg#DeeDee-BoldItalic') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DeeDee';
+  src: url($fontsUrl + 'DeeDee/DeeDee-Italic.eot');
+  src: url($fontsUrl + 'DeeDee/DeeDee-Italic.eot?#iefix') format('embedded-opentype'),
+  url($fontsUrl + 'DeeDee/DeeDee-Italic.woff2') format('woff2'),
+  url($fontsUrl + 'DeeDee/DeeDee-Italic.woff') format('woff'),
+  url($fontsUrl + 'DeeDee/DeeDee-Italic.svg#DeeDee-Italic') format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Regular.eot');
+  src: url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Regular.eot?#iefix') format('embedded-opentype'),
+  url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Regular.woff2') format('woff2'),
+  url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Regular.woff') format('woff'),
+  url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Regular.svg#AlegreyaSans/AlegreyaSans-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Medium.eot');
+  src: url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Medium.eot?#iefix') format('embedded-opentype'),
+  url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Medium.woff2') format('woff2'),
+  url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Medium.woff') format('woff'),
+  url($fontsUrl + 'AlegreyaSans/AlegreyaSans-Medium.svg#AlegreyaSans/AlegreyaSans-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}

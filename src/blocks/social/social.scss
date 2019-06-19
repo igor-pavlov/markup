@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+
+  &--login {
+    .social__item {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__item {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    border: 1px solid rgba($color-carnation, .6);
+    border-radius: 50%;
+    color: $color-rose-bud;
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    @include my-transition;
+
+    & + .social__item {
+      margin-left: 14px;
+    }
+  }
+}

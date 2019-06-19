@@ -1,0 +1,40 @@
+{
+  "main": [
+    {"title": "Каталог заявок", "href": "#"},
+    {"title": "Все профессионалы", "href": "#"},
+    {"title": "Стать профи", "href": "#"}
+  ],
+  "footer": [
+    {"title": "О проекте", "href": "#"},
+    {"title": "Конфиденциальность", "href": "#"},
+    {"title": "Обратная связь", "href": "#"},
+    {"title": "Платные сервисы", "href": "#"},
+    {"title": "Рекламодателю", "href": "#"},
+    {"title": "Служба поддержки", "href": "#"}
+  ],
+  "social": [
+    {"title": "vk", "href": "#"},
+    {"title": "fb", "href": "#"},
+    {"title": "ok", "href": "#"},
+    {"title": "tw", "href": "#"}
+  ],
+  "social_login": [
+    {"title": "vk", "icon": "vk", "href": "#"},
+    {"title": "fb", "icon": "fb", "href": "#"},
+    {"title": "ok", "icon": "ok", "href": "#"},
+    {"title": "ya", "icon": "ya", "href": "#"}
+  ],
+  "with_share": [
+    {"title": "vk", "icon": "vk", "href": "#"},
+    {"title": "fb", "icon": "fb", "href": "#"},
+    {"title": "ok", "icon": "ok", "href": "#"},
+    {"title": "ya", "icon": "ya", "href": "#"},
+    {"title": "share", "icon": "share", "href": "#"}
+  ],
+  "sidebar": [
+    {"title": "vk", "icon": "vk", "href": "#"},
+    {"title": "fb", "icon": "fb", "href": "#"},
+    {"title": "ok", "icon": "ok", "href": "#"},
+    {"title": "ya", "icon": "ya", "href": "#"}
+  ]
+}

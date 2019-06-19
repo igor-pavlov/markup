@@ -1,0 +1,8 @@
+mixin link(data)
+    - data = data || {}
+
+    if (data.active)
+        +b('a').link.link--active(href=data.href)&attributes(attributes)=data.title
+    else
+        +b('a').link(href=data.href)&attributes(attributes)=data.title
+

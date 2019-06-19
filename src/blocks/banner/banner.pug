@@ -1,0 +1,14 @@
+include ../container/container
+
+mixin banner(data)
+    - data = data || {}
+
+    +b.banner&attributes(attributes)
+        +container()
+            +e('a').link(href=data.href)
+                +e('img').image(src=data.image)
+
+    if (data.image_mobile)
+        +b.banner-mobile
+            +e('a').link(href=data.link)
+                +e('img').image(src=data.image_mobile)

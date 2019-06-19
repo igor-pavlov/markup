@@ -1,0 +1,23 @@
+include ../container/container
+include ../logo/logo
+include ../menu/menu
+include ../authors/authors
+include ../social/social
+
+mixin footer()
+    +b('footer').footer&attributes(attributes)
+        +container().footer__container
+            +e.left
+                +e.logo
+                    +logo()
+                    +b('a').logo-mobile(href="#")
+                        +icon('logo-mobile')
+                +e.menu
+                    +menu('footer', getData('pages.json'))
+
+            +e.right
+                +e.social()
+                    +social('footer', getData('pages.json'))
+
+                +e.authors
+                    +authors()

@@ -1,0 +1,11 @@
+include ../icon/icon
+
+mixin filter(data)
+    - data = data || {}
+
+    +b.filter&attributes(attributes)
+        select.choices-target(name=`${data.name}`)
+            each item in data.items
+                option(value=`${item.text}`)
+                    +e('span').icon.filter__icon--none
+                    =item.text

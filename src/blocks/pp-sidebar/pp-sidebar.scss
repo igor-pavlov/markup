@@ -1,0 +1,156 @@
+.pp-sidebar {
+  &__row {
+    margin-bottom: 20px;
+  }
+
+  &__photo {
+    width: 258px;
+    height: 258px;
+    background-size: cover;
+    position: relative;
+    border-radius: 8px;
+
+    svg, img {
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__name {
+    font-family: "DeeDee", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: $color-black;
+  }
+
+  &__block {
+    padding-top: 10px;
+    border-bottom: 1px solid $color-alto;
+
+    .pp-sidebar__row {
+      margin-bottom: 10px;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-black;
+
+    span {
+      display: block;
+      font-size: 14px;
+      color: $color-alto2;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    color: $color-black;
+
+    &:hover {
+      opacity: .7;
+      border-color: transparent;
+    }
+
+    &--tel {
+      border-color: transparent;
+    }
+
+    &--mailto, &--site {
+      border-bottom: 1px solid $color-black;
+
+      &:hover {
+        border-color: $color-black;
+      }
+    }
+  }
+
+  .button {
+    width: 100%;
+    height: 48px;
+  }
+
+  &__profession {
+    padding: 10px;
+    background-color: rgba($color-silver-chalice, .2);
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    color: $color-black;
+    border-radius: 4px;
+  }
+
+  &__list {
+    &_item {
+      margin-bottom: 2px;
+    }
+  }
+
+  .social {
+    margin-top: 8px;
+
+    &__item {
+      width: 24px;
+      height: 24px;
+      background-color: $color-alto;
+      border: none;
+
+      &:hover {
+        opacity: .7;
+      }
+
+      &--vk {
+        svg, img {
+          width: 16px;
+        }
+      }
+
+      &--fb, &--ya, &--ok {
+        svg, img {
+          height: 16px;
+        }
+      }
+
+      & + .social__item {
+        margin-left: 7px;
+      }
+    }
+  }
+
+  &__ratings {
+    display: flex;
+
+    .pp-sidebar__item {
+      width: 50%;
+      text-align: center;
+      padding-bottom: 10px;
+
+      & + .pp-sidebar__item {
+        border-left: 1px solid $color-alto;
+      }
+    }
+  }
+
+  &__rating {
+    font-family: "DeeDee", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: $color-carnation;
+  }
+}

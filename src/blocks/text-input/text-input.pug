@@ -1,0 +1,17 @@
+include ../error/error
+
+mixin text-input(data)
+    - data = data || {}
+    - imageClass = ''
+
+    if data.image
+        - imageClass = `text-input--${data.image}`
+
+    +b.text-input(class=imageClass)
+        if data.label
+            +e('label').label(for=data.name)=data.label
+
+        +e('input').input(class=`text-input__input--${data.style}` placeholder=data.placeholder name=data.name id=data.name value=data.value)&attributes(attributes)
+        +error()
+
+        block

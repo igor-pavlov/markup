@@ -1,0 +1,159 @@
+.text-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &--cost {
+    position: relative;
+
+    .text-input__input {
+      padding-right: 30px !important;
+    }
+
+    &:after {
+      font-family: "Alegreya Sans", sans-serif;
+      position: absolute;
+      content: '₽';
+      font-size: 16px;
+      color: $color-nobel;
+      bottom: 14px;
+      right: 14px;
+
+      @media screen and (max-width: 568px) {
+        bottom: 10px;
+      }
+    }
+  }
+
+  &--magnifier-orange {
+    position: relative;
+
+    .text-input__input {
+      font-family: "Alegreya Sans", sans-serif;
+      padding-left: 14px;
+      padding-right: 45px !important;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      bottom: 15px;
+      right: 15px;
+      background: url("../images/icons/magnifier-orange.svg") center center no-repeat;
+
+      @media screen and (max-width: 568px) {
+        bottom: 10px;
+      }
+    }
+  }
+
+  &--check-circle {
+    position: relative;
+
+    .text-input__input {
+      font-family: "Alegreya Sans", sans-serif;
+      padding-left: 14px;
+      padding-right: 45px !important;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 30px;
+      bottom: 10px;
+      right: 10px;
+      background: url("../images/icons/check-circle.svg") center center no-repeat;
+
+      @media screen and (max-width: 568px) {
+        bottom: 4px;
+      }
+    }
+  }
+
+  &--calendar {
+    position: relative;
+    width: 258px !important;
+
+    .text-input__input {
+      padding-right: 45px !important;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      width: 19px;
+      height: 14px;
+      bottom: 14px;
+      right: 14px;
+      opacity: .7;
+      background: url("../images/icons/calendar.svg") center center no-repeat;
+    }
+  }
+
+  &--send-message {
+    position: relative;
+    width: 83%;
+
+    .text-input__input {
+      width: 100%;
+      padding-right: 50px;
+      font-family: "Alegreya Sans", sans-serif;
+    }
+
+    .button {
+      position: absolute;
+      right: 13px;
+      bottom: 11px;
+      padding: 0;
+
+      @media screen and (max-width: 568px) {
+        bottom: 6px;
+      }
+    }
+  }
+
+  &__label {
+    font-family: "Alegreya Sans", sans-serif;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: $color-black;
+
+    @media screen and (max-width: 568px) {
+      font-size: 16px;
+    }
+  }
+
+  &__input {
+    font-family: "DeeDee", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-black;
+    border-radius: 4px;
+    padding: 14px 20px;
+
+    @media screen and (max-width: 568px) {
+      padding: 9px 14px;
+    }
+
+    &--main {
+      background: $color-white;
+      border: 1px solid $color-alto;
+      width: 260px;
+    }
+  }
+
+  @include placeholder {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $color-nobel;
+
+    @media screen and (max-width: 568px) {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+extends ../blocks/layout/layout
+include ../blocks/link/link
+
+block head
+    - var pageTitle = 'Главная';
+    - var pageDescription = 'Главная';
+    - var pageKeywords = 'Главная';
+
+block content
+    main.content.content--centered
+        ul
+            li(style="margin: 15px 0")
+                +link({"href": "feedback.html", "title": "Оставить отзыв"})
+            li(style="margin: 15px 0")
+                +link({"href": "cp-reviews.html", "title": "Страница отзывов"})
+            li(style="margin: 15px 0")
+                +link({"href": "list-professional.html", "title": "Каталог"})
+
+

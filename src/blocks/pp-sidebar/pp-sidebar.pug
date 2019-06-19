@@ -1,0 +1,65 @@
+include ../cp-menu/cp-menu
+include ../button/button
+include ../icon/icon
+include ../link/link
+include ../social/social
+
+mixin pp-sidebar(data)
+    - data = data || {}
+
+    +b.pp-sidebar&attributes(attributes)
+        +e.row
+            +e.photo(style="background-image: url('assets/images/professional.png')")
+                +icon('pro-big')
+        +e.row
+            +e('h4').name Константин Константинович
+        +e.row
+            +cp-menu(getData("cp-menu.json"))
+        +e.profession
+            | Фотограф с
+            +e('span').since &nbsp;2009
+        +e.block
+            +e.item
+                span Город:
+                | Краснодарский край г. Краснодар
+                +link({"title": "Показать на карте", "href": "#"}).link--dashed
+            +e.item
+                span Готов к выезду:
+                +e('ul').list
+                    +e('li').list_item Москва
+                    +e('li').list_item Сочи
+                    +e('li').list_item Крым
+                    +e('li').list_item Ростов-на-Дону
+
+        +e.block
+            +e.item
+                span Телефон:
+                +link({"title": "+7 (967) 31-000-42", "href": "tel:+7 (967) 31-000-42"}).pp-sidebar__link.pp-sidebar__link--tel
+
+            +e.item
+                span Электронная почта:
+                +link({"title": "olga@gmail.com", "href": "mailto:olga@gmail.com"}).pp-sidebar__link.pp-sidebar__link--mailto
+
+            +e.item
+                span Сайт:
+                +link({"title": "http://mysite.ru/", "href": "http://mysite.ru/"}).pp-sidebar__link.pp-sidebar__link--site
+
+            +e.item
+                span Социальные сети:
+                +social('sidebar', getData('pages.json'))
+
+        +e.block
+            +e.ratings
+                +e.item
+                    span Рейтинг:
+                    +e.rating 4.7
+                +e.item
+                    span Отзывы:
+                    +e.rating 30
+
+        +e.block
+            +e.item
+                span Цены на услуги:
+                | от <strong>30000</strong> до <strong>50000</strong> руб.
+
+

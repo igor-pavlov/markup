@@ -1,0 +1,94 @@
+include ../tag/tag
+include ../button/button
+include ../icon/icon
+include ../control/control
+
+mixin card(item)
+    - item = item || {}
+
+    +b.card(class=`card--id-${item.id}`)&attributes(attributes)
+        +e.header
+            +e.photo(style="background-image: url(" + `${item.image}` + ")")
+                if item.pro === true
+                    +icon('pro')
+            +e.col
+                +e.left
+                    +e.row
+                        +e('h2').name=item.name
+                    +e.details
+                        +e.detail Cпециализация:
+                            +e('p').text=item.profession
+                        +e.detail Откуда:
+                            +e('p').text=item.city
+                        +e.detail Рейтинг:
+                            +e('p').text=item.rating
+                    +e.row
+                        each tag in item.tags
+                            +tag(tag)
+                        +tag("...").tag__more
+
+                +e.right
+                    +e.price от&nbsp;
+                        span=item.price
+                        | &nbsp;руб.
+                    +e.row
+                        +button({"title": "Написать", "style": "main"})
+
+        +e.body
+            +e('h6').title О гуру
+            +e('p').text=item.about
+        +e.footer
+            +e.title Примеры работ
+
+            +e.works(class=`card__works--${item.speciality}`)
+                if item.speciality === 'photo'
+                    +e.gallery.card__gallery--photo
+                        each image in item.works
+                            +e('a').work(href=`${image}`)
+                                img(src=`${image}`)
+
+                if item.speciality === 'video'
+                    +e.gallery.card__gallery--video
+                        each image in item.works
+                            +e('a').work(href="#")
+                                img(src=`${image}`)
+                                +button({"title": "", "style": "play"})
+
+                if item.speciality === 'audio'
+                    +e.gallery.card__gallery--audio
+                        each image in item.works
+                            +e('a').work(href=`${image}`)
+                                img(src=`${image}`)
+
+                if item.speciality === 'doc'
+                    +e.gallery.card__gallery--doc
+                        each work in item.works
+                            +e('a').work(href="#")
+                                +control(item.speciality)
+
+            +e.works-mobile
+                if item.speciality === 'photo'
+                    +e.gallery.card__gallery--photo.swiper-wrapper
+                        each image in item.works
+                            +e('a').work(href=`${image}`).swiper-slide
+                                img(src=`${image}`)
+
+                if item.speciality === 'video'
+                    +e.gallery.card__gallery--video.swiper-wrapper
+                        each image in item.works
+                            +e('a').work(href="#").swiper-slide
+                                img(src=`${image}`)
+                                +button({"title": "", "style": "play"})
+
+                if item.speciality === 'audio'
+                    +e.gallery.card__gallery--audio
+                        each image in item.works
+                            +e('a').work(href=`${image}`)
+                                img(src=`${image}`)
+
+        +e.price-mobile
+            +e.price от&nbsp;
+                span=item.price
+                | &nbsp;руб.
+            +e.row
+                +button({"title": "Написать", "style": "main"})

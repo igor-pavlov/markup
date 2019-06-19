@@ -1,0 +1,18 @@
+.heading {
+  padding-top: 14px;
+  height: 135px;
+
+  @media screen and (max-width: 568px) {
+    padding-top: 28px;
+    height: 100%;
+  }
+
+  &__container {
+    height: 100%;
+    border-bottom: 1px solid $color-alto;
+
+    @media screen and (max-width: 568px) {
+      padding-bottom: 21px;
+    }
+  }
+}

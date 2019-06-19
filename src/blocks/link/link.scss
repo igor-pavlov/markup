@@ -1,0 +1,22 @@
+.link {
+  color: $color-tundora;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  @include my-transition;
+  border-bottom: 1px solid transparent;
+
+  &--active, &:hover {
+    border-color: $color-carnation;
+  }
+
+  &--dashed {
+    font-size: 14px;
+    color: $color-carnation;
+    border-bottom: 1px dashed rgba($color-carnation, .5);
+
+    &:hover {
+      border-bottom: 1px solid $color-carnation;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+mixin sidebar(data)
+    - data = data || {}
+
+    +b.sidebar&attributes(attributes)
+        +e.header
+            +logo()
+            +e('a').close(href="#")
+
+        block
+

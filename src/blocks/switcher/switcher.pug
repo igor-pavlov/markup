@@ -1,0 +1,8 @@
+mixin switcher(data)
+    - data = data || {}
+
+    +b.switcher&attributes(attributes)
+        +e('input').input(type="checkbox")
+        +e.button
+        +e.text=data
+

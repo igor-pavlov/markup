@@ -1,0 +1,151 @@
+.filter {
+  width: 262px;
+  box-sizing: content-box;
+  margin-right: 20px;
+
+  @media screen and (max-width: 568px) {
+    width: 50%;
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  &:nth-child(2n) {
+    @media screen and (max-width: 568px) {
+      margin-right: 0;
+    }
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    width: 13px;
+    height: 14px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media screen and (max-width: 568px) {
+      top: 11px;
+    }
+
+    &--asc {
+      background-image: url("../images/icons/order-asc.svg");
+    }
+
+    &--desc {
+      background-image: url("../images/icons/order-desc.svg");
+    }
+
+    &--none {
+      background-image: url("../images/icons/order-none.svg");
+    }
+  }
+
+  .choices__inner {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    background-color: #FAFAFA;
+    padding: 0;
+    border: 1px solid #E1E1E1;
+    font-size: 18px;
+    height: 48px;
+    min-height: 48px;
+    overflow: hidden;
+    border-radius: 8px;
+
+    @media screen and (max-width: 568px) {
+      height: 38px;
+      min-height: 38px;
+    }
+  }
+
+  .choices.is-open {
+    .choices__inner {
+      border-radius: 4px 4px 0 0;
+      border-color: #636363;
+      border-bottom: none;
+    }
+  }
+
+  .choices__list {
+    padding: 0;
+
+    &--dropdown {
+      border-radius: 0 0 4px 4px;
+      border-color: #636363;
+      border-top: none;
+
+      &.is-active {
+        z-index: 99;
+      }
+
+      .choices__item--selectable.is-highlighted {
+        background-color: #FEE6DC;
+      }
+    }
+  }
+
+  .choices[data-type*="select-one"] .choices__inner {
+    padding-bottom: 0;
+  }
+
+  .choices__item {
+    position: relative;
+    cursor: pointer;
+    line-height: 48px;
+    height: 100%;
+    padding: 0 18px 0 39px;
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-black;
+    background-color: #FAFAFA;
+    @include my-transition;
+
+    @media screen and (max-width: 568px) {
+      line-height: 38px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 16px;
+      left: 17px;
+      width: 13px;
+      height: 14px;
+
+      @media screen and (max-width: 568px) {
+        top: 11px;
+      }
+    }
+  }
+
+  .choices[data-type*="select-one"]:after {
+    height: 10px;
+    width: 12px;
+    background: url("../images/icons/arrow-orange.svg") center center no-repeat;
+    border: none;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+  }
+}

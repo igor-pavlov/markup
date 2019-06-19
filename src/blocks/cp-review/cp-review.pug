@@ -1,0 +1,28 @@
+include ../link/link
+
+mixin cp-review(item)
+    - item = item || {}
+
+    +b.cp-review(class=`cp-review--${item.id}`)&attributes(attributes)
+        +e.body
+            +e.left
+                +e.date=item.date
+                +e.title=item.title
+                +e.desc=item.desc
+
+            +e.right
+                +e.info
+                    +e.photo(style="background-image: url(" + `${item.image}` + ")")
+                    +e.about
+                        +e.name=item.name
+                        +e.profession=item.profession
+                +e.ratings
+                    +e.rating-ovr=item.ratingOvr
+                    +e.rating-more
+                        each rating, index in item.ratings
+                            +e.rating= index + ': '
+                                span=rating
+
+
+
+

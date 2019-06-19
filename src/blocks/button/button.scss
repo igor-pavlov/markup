@@ -1,0 +1,191 @@
+a.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  user-select: none;
+  @include my-transition;
+
+  &[disabled] {
+    opacity: .4;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &--main {
+    background-color: $color-carnation;
+    color: $color-white;
+    font-family: "DeeDee", sans-serif;
+    font-size: 16px;
+
+    &:hover, &:focus {
+      background-color: $color-flamingo;
+    }
+  }
+
+  &--filled {
+    background-color: $color-cinderella;
+    color: $color-carnation;
+
+    &:hover, &:focus {
+      background-color: $color-carnation;
+      color: $color-white;
+    }
+  }
+
+  &--bordered {
+    border-color: $color-carnation;
+    color: $color-carnation;
+
+    &:hover, &:focus {
+      background-color: $color-carnation;
+      color: $color-white;
+    }
+  }
+
+  &--attach {
+    svg, img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover, &:focus {
+      opacity: .7;
+    }
+  }
+
+  &--smile {
+    border-left: 1px solid $color-mercury;
+
+    &:hover, &:focus {
+      opacity: .7;
+    }
+  }
+
+  &--send-message {
+    &:hover, &:focus {
+      opacity: .7;
+    }
+  }
+
+  &--delete, &--archive, &--activate, &--block, &--reject {
+    position: relative;
+    font-size: 13px;
+    height: 32px;
+    border-color: $color-victoria;
+    color: $color-black;
+    padding: 0 17px 0 36px;
+
+    svg {
+      position: absolute;
+      left: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      --main-color: #48448C;
+    }
+
+    &:hover, &:focus {
+      background-color: $color-victoria;
+      color: $color-white;
+
+      svg {
+        --main-color: #FFF;
+      }
+    }
+  }
+
+  &--activate {
+    position: relative;
+    font-size: 13px;
+    height: 32px;
+    border-color: $color-de-york;
+    color: $color-black;
+    padding: 0 17px 0 36px;
+  }
+
+  &--action {
+    background-color: $color-victoria;
+    color: $color-white;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover, &:focus {
+      background-color: $color-minsk;
+    }
+  }
+
+  &--footer-box {
+    height: 58px;
+    font-family: "DeeDee", sans-serif;
+    font-size: 16px;
+    color: $color-carnation;
+    width: 100%;
+  }
+
+  &--play {
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgba($color-victoria, .5);
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 42px;
+      height: 42px;
+      background-color: $color-victoria;
+      border-radius: 50%;
+    }
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      width: 14px;
+      height: 15px;
+      transform: translate(-50%, -50%);
+      background: url("../images/icons/play.svg");
+    }
+
+    &:hover, &:focus {
+      background-color: $color-victoria;
+    }
+  }
+
+  &--pp-list {
+    position: relative;
+
+    svg {
+      position: absolute;
+      left: 14px;
+      top: 9px;
+      --main-color: #F67660;
+    }
+
+    &:hover, &:focus {
+      color: $color-white;
+
+      svg {
+        --main-color: #FFF;
+      }
+    }
+  }
+}

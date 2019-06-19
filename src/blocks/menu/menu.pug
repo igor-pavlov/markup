@@ -1,0 +1,30 @@
+include ../link/link
+
+mixin menu(location, data)
+    - data = data || {}
+    - location = location || {}
+
+    +b('nav').menu(class=`menu--${location}`)&attributes(attributes)
+        +e('ul').list
+            if location === 'header'
+                each link, index in data.main
+                    +e('li').item
+                        if index === 0
+                            +link({"title": link.title, "href": link.href, "active": true})
+                        else
+                            +link({"title": link.title, "href": link.href})
+
+            if location === 'footer'
+                each link in data.footer
+                    +e('li').item
+                        +link({"title": link.title, "href": link.href})
+
+        +e('ul').list-mobile.mobile-visible
+            if location === 'header'
+                +e('li').item
+                    +link({"title": "О проекте", "href": "#"})
+                +e('li').item
+                    +link({"title": "Обратная связь", "href": "#"})
+                +e('li').item
+                    +link({"title": "Платные сервисы", "href": "#"})
+

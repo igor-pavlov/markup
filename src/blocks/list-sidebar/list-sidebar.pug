@@ -1,0 +1,124 @@
+include ../list/list
+include ../link/link
+include ../checkbox/checkbox
+include ../text-input/text-input
+include ../button/button
+
+mixin list-sidebar(data)
+    - data = data || {}
+
+    +b.list-sidebar&attributes(attributes)
+        +e.item
+            +e.body
+                +e('h6').title Гуру
+                +e.content
+                    +list(getData('specialists-list.json'))
+
+            +e.footer
+                +e.more
+                    +link({"title": "Больше категорий", "href": "#"})
+
+        +e.item
+            +e.body
+                +e('h6').title Специализация
+                +e.content
+                    +checkbox({"label": "Ню", "name": "nyu", "style": "main"})
+                    +checkbox({"label": "Детская", "name": "kids", "style": "main"})
+                    +checkbox({"label": "Семейная", "name": "family", "style": "main"})
+                    +checkbox({"label": "Фуд-фото", "name": "food", "style": "main"})
+
+        +e.item
+            +e.body
+                +e('h6').title Тип мероприятия
+                +e.content.sidebar__content--event
+                    .event-type#events
+                        input.search
+                        button.sort(data-sort='event')
+                        #events__container
+                            ul.list.event-type__list#event-type__list
+                                li
+                                    h3.event Свадьба
+                                li
+                                    h3.event Корпоротив
+                                li
+                                    h3.event Детский праздник
+                                li
+                                    h3.event День рождения
+                                li
+                                    h3.event Похороны
+                                li
+                                    h3.event Выстовка
+                                li
+                                    h3.event Репортаж
+                                li
+                                    h3.event Афтерпати
+                                li
+                                    h3.event Свадьба
+                                li
+                                    h3.event Корпоротив
+                                li
+                                    h3.event Детский праздник
+                                li
+                                    h3.event День рождения
+                                li
+                                    h3.event Похороны
+                                li
+                                    h3.event Выстовка
+                                li
+                                    h3.event Репортаж
+                                li
+                                    h3.event Афтерпати
+                                li
+                                    h3.event Свадьба
+                                li
+                                    h3.event Корпоротив
+                                li
+                                    h3.event Детский праздник
+                                li
+                                    h3.event День рождения
+                                li
+                                    h3.event Похороны
+                                li
+                                    h3.event Выстовка
+                                li
+                                    h3.event Репортаж
+                                li
+                                    h3.event Афтерпати
+                                li
+                                    h3.event Свадьба
+                                li
+                                    h3.event Корпоротив
+                                li
+                                    h3.event Детский праздник
+                                li
+                                    h3.event День рождения
+                                li
+                                    h3.event Похороны
+                                li
+                                    h3.event Выстовка
+                                li
+                                    h3.event Репортаж
+                                li
+                                    h3.event Афтерпати
+
+        +e.item
+            +e.body
+                +e('h6').title Город
+
+        +e.item
+            +e.body
+                +e('h6').title Дата
+
+        +e.item
+            +e.body
+                +e('h6').title Бюджет
+                +e.content.sidebar__content--budget
+                    +e.budget
+                        +text-input({"name": "min-price", "placeholder": "", "style": "main"})(data-min="1000" data-max="99999" data-value="5000")
+                        span &mdash;
+                        +text-input({"name": "max-price", "placeholder": "", "style": "main"})(data-min="1000" data-max="99999" data-value="50000")
+
+                    +e.slider.js-sidebar-slider
+
+        +button({"title": "Показать", "style": "action"})
+        +button({"title": "Сбросить", "style": "filled"})

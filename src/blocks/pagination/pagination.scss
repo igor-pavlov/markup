@@ -1,0 +1,46 @@
+.pagination {
+  border: 1px solid $color-victoria;
+  display: inline-flex;
+  margin-top: 27px;
+  border-radius: 4px;
+
+  &__item {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: $color-black;
+    min-width: 32px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include my-transition;
+
+    & + & {
+      border-left: 1px solid $color-victoria;
+    }
+
+    &--active, &:hover {
+      background-color: $color-victoria;
+      color: $color-white;
+    }
+  }
+
+  &__left, &__right {
+    svg {
+      --main-color: #000;
+    }
+
+    &:hover {
+      svg {
+        --main-color: #fff;
+      }
+    }
+  }
+
+  &__right {
+    svg, img {
+      transform: rotate(180deg);
+    }
+  }
+}

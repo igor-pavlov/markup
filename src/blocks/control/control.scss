@@ -1,0 +1,57 @@
+.control {
+  width: 258px;
+  height: 54px;
+  border-radius: 4px;
+  background: $color-porcelain;
+  display: flex;
+
+  @media screen and (max-width: 568px) {
+    width: 100%;
+  }
+
+  &__doc {
+    width: 22px;
+    height: 32px;
+    background: url("../images/icons/doc.svg") center center no-repeat;
+    background-size: contain;
+    font-family: "DeeDee", sans-serif;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 20px;
+    color: $color-white;
+    text-transform: uppercase;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: $color-black;
+  }
+
+  &__size {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    color: $color-gray3;
+  }
+
+  &--doc {
+    padding: 11px 16px;
+  }
+
+  &--audio {
+
+  }
+}

@@ -1,0 +1,63 @@
+include ../container/container
+include ../sidebar/sidebar
+include ../pp-sidebar/pp-sidebar
+
+include ../title/title
+include ../subtitle/subtitle
+include ../textarea/textarea
+include ../notification/notification
+include ../star/star
+include ../button/button
+include ../switcher/switcher
+
+mixin feedback(data)
+    - data = data || {}
+
+    +b.feedback&attributes(attributes)
+        +container().feedback__container
+            +sidebar()
+                +pp-sidebar()
+            +e.list
+                +title("Оставить отзыв")
+                +subtitle("Выставьте оценки исполнителю вашей заявки по трем направлениям, где наивысший балл означает наивысшую степень удовлетворения по соответствующему параметру.")
+                +e.content
+                    +e.left
+                        +textarea({
+                            "label": "Текст отзыва",
+                            "placeholder": "Опишите Ваши впечатления",
+                            "value": "В моей команде только самые лучшие фотографы и видеографы. Мы отсняли более 700 свадеб как в Краснодаре и Краснодарском крае, так и по всей России и Европе (есть постоянно действующий Шенген). По договоренности краткий отчет о вадьбе мы отправляем уже на следующий день! Все фотографии тщательно обрабатываются и отдаются.",
+                            "name": "main"
+                        })
+                        +notification('После отправки отзыва вы не сможете его отредактировать. Но вы всегда сможете оставить дополнительный!')
+                    +e.right
+                        +e.stars
+                            h6.feedback__stars_title Качество работы
+                            .feedback__stars_body
+                                +star().star--active
+                                +star().star--active
+                                +star().star--active
+                                +star()
+                                +star()
+                        +e.stars
+                            h6.feedback__stars_title Пунктуальность
+                            .feedback__stars_body
+                                +star().star--active
+                                +star().star--active
+                                +star().star--active
+                                +star()
+                                +star()
+                        +e.stars
+                            h6.feedback__stars_title Общение
+                            .feedback__stars_body
+                                +star().star--active
+                                +star().star--active
+                                +star().star--active
+                                +star()
+                                +star()
+
+                +e.buttons
+                    +e.column
+                        +button({"title": "Оставить отзыв", "style": "main"})
+                    +e.column
+                        +switcher('Оставить отзыв анонимно')
+

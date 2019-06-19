@@ -1,0 +1,11 @@
+.subtitle {
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: $color-mine-shaft;
+  text-align: center;
+
+  @media screen and (max-width: 568px) {
+    font-size: 14px;
+  }
+}

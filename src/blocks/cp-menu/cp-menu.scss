@@ -1,0 +1,47 @@
+.cp-menu {
+
+  &__list {
+    padding: 24px 15px 12px;
+    background: #FAFAFA;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 13px;
+    display: flex;
+    align-items: center;
+  }
+
+  .link {
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $color-black;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+
+  &__count {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: $color-white;
+    border: 1px solid $color-carnation;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: $color-black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

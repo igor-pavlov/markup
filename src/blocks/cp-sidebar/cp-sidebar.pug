@@ -1,0 +1,23 @@
+include ../cp-menu/cp-menu
+include ../button/button
+
+mixin cp-sidebar(data)
+    - data = data || {}
+
+    +b.cp-sidebar&attributes(attributes)
+        +e.row
+            +e('img').photo(src="assets/images/customer.png")
+        +e.row
+            +e('h4').name Шишкина Ольга
+        +e.row
+            +cp-menu(getData("cp-menu.json"))
+        +e.row
+            +e.item
+                span Город:
+                | Краснодарский край г. Краснодар
+        +e.row
+            +e.item
+                span Электронная почта:
+                | olga@gmail.com
+        +e.row
+            +button({"title":"Создать заявку", "style":"main"})

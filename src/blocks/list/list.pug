@@ -1,0 +1,15 @@
+include ../link/link
+
+mixin list(data)
+    - data = data || {}
+
+    +b('ul').list&attributes(attributes)
+        each item in data.specialists
+            +e('li').item
+                +link({"title": item.title, "href": item.href})
+                if item.count
+                    +e('span').count=' ' + item.count
+
+        +e.item.list__item--all
+            +link({"title": "Все специалисты", "href": "#"})
+            +e('span').count=' ' + '30'

@@ -1,0 +1,13 @@
+include ../container/container
+include ../title/title
+include ../subtitle/subtitle
+
+mixin heading(data)
+    - data = data || {}
+
+    +b.heading&attributes(attributes)
+        +container().heading__container
+            if data.title
+                +title(data.title)
+            if data.subtitle
+                +subtitle(data.subtitle)

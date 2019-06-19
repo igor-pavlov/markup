@@ -1,0 +1,159 @@
+html {
+  min-height: 100%;
+
+  @media screen and (max-width: 568px) {
+    overflow-x: hidden;
+  }
+}
+
+.page {
+  position: relative;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @media screen and (max-width: 568px) {
+    overflow-x: hidden;
+  }
+}
+
+.page__not-scroll {
+  overflow-y: hidden;
+}
+
+.content {
+  flex: 1 0 auto;
+  padding-top: 90px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid $color-alto;
+
+  @media screen and (max-width: 568px) {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+
+  &--main-page {
+    background-color: $color-alabaster2;
+  }
+
+  &--centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.wrapper {
+  width: calc(100% - 258px - 26px);
+
+  @media screen and (max-width: 568px) {
+    width: 100%;
+  }
+}
+
+.width_1-1 {
+  width: 100% !important;
+}
+
+.width_1-2 {
+  width: 50% !important;
+}
+
+.width_1-3 {
+  width: 33% !important;
+}
+
+.width_1-4 {
+  width: 25% !important;
+
+  @media screen and (max-width: 568px) {
+    width: 100% !important;
+  }
+}
+
+.width_2-3 {
+  width: 66% !important;
+}
+
+.width_3-4 {
+  width: 75% !important;
+
+  @media screen and (max-width: 568px) {
+    width: 100% !important;
+  }
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.lg-on {
+  overflow: hidden;
+}
+
+#lg-counter span {
+  font-family: "DeeDee", sans-serif;
+}
+
+.lg-backdrop.in {
+  background-color: rgba($color-black, .7);
+}
+
+@mixin my-transition {
+  transition: all .3s;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+.is-hide {
+  display: none !important;
+}
+
+.is-ovh {
+  overflow: hidden;
+}
+
+.tac {
+  text-align: center;
+}
+
+.is-bg {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.2);
+    z-index: 99;
+  }
+}
+
+.mobile-visible {
+  display: none;
+
+  @media screen and (max-width: 568px) {
+    display: block;
+  }
+}
+
+.mobile-hide {
+  @media screen and (max-width: 568px) {
+    display: none;
+  }
+}
+
+
+

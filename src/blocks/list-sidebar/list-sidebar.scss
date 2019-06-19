@@ -1,0 +1,235 @@
+.list-sidebar {
+  padding-bottom: 20px;
+
+  &__item {
+    background: #FAFAFA;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+
+  &__body {
+    padding: 10px;
+  }
+
+  &__title {
+    position: relative;
+    font-family: "DeeDee", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: $color-black;
+    padding: 10px 8px 20px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      height: 10px;
+      width: 12px;
+      background: url(../images/icons/arrow-orange.svg) center center no-repeat;
+      border: none;
+      right: 10px;
+      top: 40%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__content {
+    border-top: 1px solid #DFDFDF;
+    padding: 20px 10px 10px;
+
+    &--event {
+      padding: 20px 0 5px;
+    }
+
+    &--budget {
+      padding-bottom: 27px;
+    }
+
+    .list {
+      height: 223px;
+      overflow: hidden;
+      transition: height .5s;
+
+      &--active {
+        height: auto;
+      }
+    }
+
+    .checkbox {
+      margin-bottom: 13px;
+      min-height: 20px;
+      height: auto;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &__label {
+        font-family: "Alegreya Sans", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: $color-black;
+        display: block;
+      }
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid #DFDFDF;
+    padding: 14px 20px;
+  }
+
+  &__more {
+    height: 26px;
+    padding-left: 38px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .link {
+      color: $color-carnation;
+      font-size: 14px;
+
+      &:before {
+        position: absolute;
+        content: '+';
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        color: $color-carnation;
+        border: 1px solid $color-carnation;
+      }
+    }
+  }
+
+  &__budget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .text-input__input {
+      height: 32px;
+      width: 90px;
+      font-family: "Alegreya Sans", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: $color-black;
+      padding: 0 10px;
+    }
+  }
+
+  &__slider {
+    &.noUi-target {
+      border: none;
+      border-radius: 8px;
+      height: 2px;
+      background: #E1E1E1;
+    }
+
+    &.noUi-horizontal {
+      .noUi-handle {
+        top: -12px;
+        background: $color-white;
+        border: 1px solid #48448C;
+        box-shadow: 0 0 4px rgba($color-black, 0.13);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+
+        &:before {
+          height: 5px;
+          width: 1px;
+          background: rgba(208, 208, 208, 0.5);
+          left: 10px;
+          top: 9px;
+        }
+
+        &:after {
+          height: 5px;
+          width: 1px;
+          background: rgba(208, 208, 208, 0.5);
+          left: 13px;
+          top: 9px;
+        }
+      }
+    }
+
+    .noUi-connect {
+      background: $color-victoria;
+    }
+  }
+
+  .event-type {
+    position: relative;
+
+    #events__container {
+      margin-top: 7px;
+      height: 264px;
+    }
+
+    &__list {
+      padding: 9px 8px 0;
+      height: auto;
+
+      li {
+        &:last-child {
+          .event {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .search {
+      background: $color-white;
+      border: 1px solid #D3D3D3;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 100%;
+      height: 32px;
+      font-family: "DeeDee", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      color: $color-black;
+      padding: 10px 35px 10px 10px;
+    }
+
+    .sort {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      width: 15px;
+      height: 15px;
+      background: url("../images/icons/magnifier.svg") center center no-repeat;
+    }
+
+    .event {
+      font-family: "Alegreya Sans", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: $color-black;
+      margin-bottom: 13.5px;
+    }
+  }
+
+  .button {
+    height: 48px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+

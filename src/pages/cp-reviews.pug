@@ -1,0 +1,19 @@
+extends ../blocks/layout/layout
+
+include ../blocks/header/header
+include ../blocks/cp-reviews/cp-reviews
+
+include ../blocks/footer/footer
+
+block head
+    - var pageTitle = 'Customer Profile Reviews';
+    - var pageDescription = 'Customer Profile Reviews';
+    - var pageKeywords = 'Customer Profile Reviews';
+
+block content
+    +header()
+    main.content
+        - reviews = getData('cp-reviews.json')
+        +cp-reviews(reviews)
+
+    +footer()

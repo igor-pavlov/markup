@@ -1,0 +1,17 @@
+include ../icon/icon
+
+mixin pagination(data)
+    - data = data || {}
+
+    +b.pagination&attributes(attributes)
+        +e('a').item(href="#").pagination__left
+            +icon('pagination-left')
+
+        +e('a').item(href="#").pagination__item--active 1
+        +e('a').item(href="#") 2
+        +e('a').item(href="#") 3
+        +e('a').item(href="#") ...
+        +e('a').item(href="#") 99
+
+        +e('a').item(href="#").pagination__right
+            +icon('pagination-left')

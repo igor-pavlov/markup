@@ -1,0 +1,13 @@
+mixin checkbox(item)
+    - item = item || {}
+
+    +b.checkbox&attributes(attributes)
+        if item.checked
+            +e('input').input(id=item.name name=item.name type="checkbox" checked=item.checked)
+        else
+            +e('input').input(id=item.name name=item.name type="checkbox")
+
+        if item.label
+            +e('label').label(class=`checkbox__label--${item.style}` for=item.name)=item.label
+        else
+            +e('label').label(class=`checkbox__label--${item.style}` for=item.name) &nbsp;

@@ -1,0 +1,11 @@
+<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="18" height="13.5556" rx="1" stroke="#F67660" stroke-width="2"/>
+<line x1="9.38892" y1="3.94446" x2="16.1667" y2="3.94446" stroke="#F67660" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="3.83331" y1="3.94446" x2="7.27776" y2="3.94446" stroke="#F67660" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="3.83331" y1="8.38892" x2="7.27776" y2="8.38892" stroke="#F67660" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="3.94446" y1="8.38892" x2="3.94446" y2="3.83336" stroke="#F67660" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="7.27777" y1="8.38892" x2="7.27777" y2="3.83336" stroke="#F67660" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9.38892" y1="6.16669" x2="16.1667" y2="6.16669" stroke="#F67660" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="9.38892" y1="8.38892" x2="16.1667" y2="8.38892" stroke="#F67660" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="3.83331" y1="10.6111" x2="16.1666" y2="10.6111" stroke="#F67660" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,25 @@
+include ../banner/banner
+include ../button/button
+include ../filter/filter
+include ../card/card
+
+mixin catalog(data)
+    - data = data || {}
+
+    +b.catalog&attributes(attributes)
+        +e.filters-mobile
+            +button({"title": "Фильтры", "style": "action"}).js-open-sidebar-mobile
+        +e.filters
+            +filter({"name": "price", "items": [{"text": "По стоймости вверх", "image": "icon-list-price"}, {"text": "По стоймости вниз", "image": "icon-list-rating"}]}).filter--price
+            +filter({"name": "rating", "items": [{"text": "По рейтингу вверх", "image": "icon-list-price"}, {"text": "По рейтингу вниз", "image": "icon-list-rating"}]}).filter--rating
+
+        +e.list
+            - cards = getData('cards.json')
+            each item, index in cards
+                .card__box
+                    +card(item)
+
+                    if index === 1
+                        +banner({"image": "assets/images/banner2.png", "href": "#"})
+
+        +button({"title": "Показать еще", "style": "bordered"})

@@ -1,0 +1,43 @@
+.list-professional {
+  .heading {
+    padding-top: 16px;
+    height: 98px;
+
+    @media screen and (max-width: 568px) {
+      padding-top: 28px;
+      height: auto;
+    }
+
+    .title, .subtitle {
+      text-align: left;
+
+      @media screen and (max-width: 568px) {
+        text-align: center;
+      }
+    }
+
+    .title {
+      @media screen and (max-width: 568px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    padding: 40px 0 0 0;
+
+    @media screen and (max-width: 568px) {
+      position: static;
+      padding: 40px 16px 0;
+    }
+  }
+
+  &__list {
+    width: calc(100% - 258px - 26px);
+
+    @media screen and (max-width: 568px) {
+      width: 100%;
+    }
+  }
+}

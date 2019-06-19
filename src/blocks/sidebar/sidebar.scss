@@ -1,0 +1,50 @@
+.sidebar {
+  width: 258px;
+  margin-right: 26px;
+  position: relative;
+
+  @media screen and (max-width: 568px) {
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    width: 100%;
+    transition: left 1s;
+    background-color: white;
+    z-index: 45345;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &--mobile {
+    left: 0;
+    padding: 0 16px 0;
+  }
+
+  &__header {
+    padding-top: 14px;
+    display: none;
+    margin-bottom: 46px;
+
+    @media screen and (max-width: 568px) {
+      display: block;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 23px;
+    right: 25px;
+    width: 25px;
+    height: 25px;
+    background: url("../images/icons/sidebar-close.svg") no-repeat;
+    @include my-transition;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .list__item--all {
+    display: none;
+  }
+}

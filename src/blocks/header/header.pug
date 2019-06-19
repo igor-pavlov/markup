@@ -1,0 +1,47 @@
+include ../container/container
+include ../logo/logo
+include ../icon/icon
+include ../city/city
+include ../menu/menu
+include ../button/button
+include ../person/person
+
+mixin header()
+    +b('header').header&attributes(attributes)
+        +container().header__container
+            +e.left
+                +e.logo
+                    +logo()
+                +e.city
+                    +city()
+
+            +e.right
+                +e.menu
+                    +e.logo-mobile
+                        +logo()
+                        +e('a').close(href="#")
+                    +menu('header', getData('pages.json'))
+                    +city().city__mobile
+
+                +e.person.is-hide
+                    +person()
+
+                +e.buttons
+                    +button({"title": "Регистрация", "style": "filled"})
+                    +button({"title": "Вход", "style": "bordered"})
+
+            +e('a').exit(href="#").is-hide
+                +icon('sign-in')
+
+            +e('a').person-mobile(href="#")
+                .person-mobile
+                    .person-mobile_image(style="background-image: url('assets/images/person.png');")
+
+            +e('a').burger
+                span
+                span
+                span
+
+
+
+

@@ -1,0 +1,14 @@
+mixin control(data)
+    - data = data || {}
+
+    +b.control(class=`control--${data}`)&attributes(attributes)
+        if data === 'doc'
+            +e.doc pdf
+            +e.content
+                +e.title Сценарий для речи жениха
+                +e.size 203 kb
+
+        if data === 'audio'
+
+
+

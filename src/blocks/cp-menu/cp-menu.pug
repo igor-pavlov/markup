@@ -1,0 +1,15 @@
+include ../icon/icon
+include ../link/link
+
+mixin cp-menu(data)
+    - data = data || {}
+
+    +b.cp-menu&attributes(attributes)
+        +e('ul').list&attributes(attributes)
+            each item in data
+                +e('li').item
+                    +e.icon
+                        +icon(item.image)
+                    +link({"title": item.text,"href":"#"})
+                    if item.state
+                        +e.count=item.state

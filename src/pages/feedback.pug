@@ -1,0 +1,18 @@
+extends ../blocks/layout/layout
+
+include ../blocks/header/header
+include ../blocks/feedback/feedback
+
+include ../blocks/footer/footer
+
+block head
+    - var pageTitle = 'Leave feedback';
+    - var pageDescription = 'Leave feedback';
+    - var pageKeywords = 'Leave feedback';
+
+block content
+    +header()
+    main.content
+        +feedback()
+
+    +footer()

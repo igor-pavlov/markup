@@ -1,0 +1,22 @@
+include ../container/container
+include ../sidebar/sidebar
+include ../cp-sidebar/cp-sidebar
+include ../title/title
+include ../cp-review/cp-review
+include ../pagination/pagination
+
+mixin cp-reviews(reviews)
+    - reviews = reviews || {}
+
+    +b.cp-reviews&attributes(attributes)
+        +container().cp-reviews__container
+            +sidebar()
+                +cp-sidebar()
+            +e.list
+                +title("Мои отзывы")
+
+                each item in reviews
+                    +cp-review(item)
+
+                +pagination()
+

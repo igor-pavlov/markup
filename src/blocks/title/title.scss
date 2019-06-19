@@ -1,0 +1,13 @@
+.title {
+  margin-bottom: 13px;
+  font-family: "DeeDee", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: $color-black;
+  text-align: center;
+
+  @media screen and (max-width: 568px) {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,20 @@
+include ../container/container
+include ../heading/heading
+include ../sidebar/sidebar
+include ../logo/logo
+include ../catalog/catalog
+include ../list-sidebar/list-sidebar
+
+mixin list-professional(data)
+    - data = data || {}
+
+    +b.list-professional&attributes(attributes)
+        +heading({"title": "Все гуру"})
+
+        +container().list-professional__container
+            +e.sidebar
+                +sidebar()
+                    +list-sidebar()
+
+            +e.list
+                +catalog()

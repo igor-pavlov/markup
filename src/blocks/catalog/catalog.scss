@@ -1,0 +1,49 @@
+.catalog {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  &__filters-mobile {
+    display: none;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 568px) {
+      display: block;
+    }
+  }
+
+  &__filters {
+    margin-bottom: 27px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .filter {
+      @media screen and (max-width: 568px) {
+        width: 48%;
+        margin-right: 10px;
+        margin-bottom: 20px;
+      }
+
+      &:nth-child(2n) {
+        @media screen and (max-width: 568px) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: 568px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .banner {
+    //margin: 20px 0;
+  }
+
+  .button--bordered {
+    margin-top: 40px;
+    height: 48px;
+    font-size: 18px;
+  }
+}

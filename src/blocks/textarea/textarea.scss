@@ -1,0 +1,43 @@
+.textarea {
+  position: relative;
+  width: 100%;
+
+  &__label {
+    display: block;
+    font-family: "Alegreya Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-black;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 568px) {
+      font-size: 16px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    background: $color-white;
+    border: 1px solid $color-alto;
+    width: 100%;
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 400;
+    line-height: 23px;
+    font-size: 16px;
+    color: $color-shark;
+    border-radius: 4px;
+    padding: 14px 14px 20px;
+    height: auto;
+
+    &:empty {
+      &:before {
+        position: absolute;
+        content: attr(placeholder);
+        display: block; /* For Firefox */
+        color: $color-nobel;
+
+      }
+    }
+  }
+}
+

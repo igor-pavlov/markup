@@ -1,0 +1,18 @@
+extends ../blocks/layout/layout
+
+include ../blocks/header/header
+include ../blocks/list-professional/list-professional
+
+include ../blocks/footer/footer
+
+block head
+    - var pageTitle = 'List Professional';
+    - var pageDescription = 'List Professional';
+    - var pageKeywords = 'List Professional';
+
+block content
+    +header()
+    main.content
+        +list-professional()
+
+    +footer()

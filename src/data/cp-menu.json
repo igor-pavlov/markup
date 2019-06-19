@@ -1,0 +1,20 @@
+[
+  {
+    "image": "cp-mail",
+    "text": "Мои сообщения",
+    "state": "2"
+  },
+  {
+    "image": "cp-reviews",
+    "text": "Мои отзывы",
+    "state": "!"
+  },
+  {
+    "image": "cp-favorites",
+    "text": "Избранные"
+  },
+  {
+    "image": "cp-change",
+    "text": "Редактировать"
+  }
+]
